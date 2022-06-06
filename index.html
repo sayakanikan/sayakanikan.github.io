@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="shortcut icon" href="images/heading.png" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="max-width">
+        <div class="logo">
+          <a href="#home">Portfo<span>lio.</span></a>
+        </div>
+        <ul class="menu">
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#service">Skills</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir dari Navbar -->
+
+    <!-- Section Home -->
+    <section class="home" id="home">
+      <div class="max-width">
+        <div class="home-content">
+          <div class="text-halo">Hai, nama saya</div>
+          <div class="text-nama">Irfansyah</div>
+          <div class="text-pekerjaan">Saya seorang<span> Mahasiswa</span></div>
+          <a href="files/cv.pdf" class="cv" download>Download CV</a>
+          <div class="icons">
+            <a href="https://www.instagram.com/irfansy_ah/"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/irfansy_ah"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.facebook.com/irfansyah.avatar"><i class="fab fa-facebook-square fa-2x"></i></a>
+          </div>
+          <div class="images">
+            <img src="images/shape.png" class="shape" />
+            <img src="images/man.png" class="girl" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir dari Home -->
+
+    <!-- Section About -->
+    <section class="about" id="about">
+      <div class="max-width">
+        <h2 class="title">Tentang Saya</h2>
+        <div class="about-content">
+          <div class="column left">
+            <img src="images/profile.JPG" />
+          </div>
+          <div class="column right">
+            <div class="text">Hai, saya <span>Irfan</span></div>
+            <p>
+              Mahasiswa semester 6 jurusan Teknik Informatika di Universitas Dian Nuswantoro Semarang. Saya berumur 20 tahun, dan bertempat tinggal di Semarang. Saya memiliki ketertarikan di bidang web development. Saya memiliki penguasaan
+              bahasa program Html, Css, JavaScript, dan Php. Selain bahasa program saya juga menguasai framework pendukung seperti Bootstrap, dan CodeIgniter. Selain di pemrograman, saya memiliki hobi di bidang fotografi, dan videografi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir dari About -->
+
+    <!-- Section Services -->
+    <section class="service" id="service">
+      <div class="max-width">
+        <h2 class="title">Skills</h2>
+        <div class="serv-content">
+          <div class="card">
+            <div class="box">
+              <i class="fas fa-code"></i>
+              <div class="text">Front-End Web</div>
+              <p>Menguasai bahasa Html, Css, dan Javascript, serta framework bootstrap. Memiliki pengalaman pembuatan web design.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="box">
+              <i class="fas fa-database"></i>
+              <div class="text">Back-End Web</div>
+              <p>Mernguasai bahasa Php serta framework CodeIgniter. Memiliki pengalaman dalam pembuatan project web app.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="box">
+              <i class="fas fa-camera"></i>
+              <div class="text">Fotografi</div>
+              <p>Mempunyai hobi di bidang fotografi, dan memiliki pengalaman dalam mengerjakan project foto, maupun video.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir dari Services -->
+
+    <!-- Section Project -->
+    <section class="project" id="project">
+      <div class="max-width">
+        <h2 class="title">Projects</h2>
+        <div class="carousel owl-carousel">
+          <div class="card">
+            <div class="box">
+              <img src="images/phone.png" />
+              <div class="text">DinusStore.id</div>
+              <p>Web design Toko Handphone menggunakan bootstrap.</p>
+              <a href="https://github.com/sayakanikan/Web-DinusStore.id">Github</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="box">
+              <img src="images/beach.png" />
+              <div class="text">Travel Us</div>
+              <p>Web design Paket Liburan menggunakan Html, Css, Scss, dan Js.</p>
+              <a href="https://github.com/sayakanikan/Web-TravelWeb">Github</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="box">
+              <img src="images/shirt.png" />
+              <div class="text">M Studio</div>
+              <p>WebApp Toko Baju dibuat dengan CodeIgniter.</p>
+              <a href="https://github.com/sayakanikan/Web-M_Studio">Github</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="box">
+              <img src="images/car.png" />
+              <div class="text">RentalMobil.com</div>
+              <p>WebApp pemesanan rental mobil dibuat dengan CodeIgniter.</p>
+              <a href="https://github.com/sayakanikan/WebApp-RentalMobil">Github</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="box">
+              <img src="images/archive.png" />
+              <div class="text">E-Arsip</div>
+              <p>Sistem Informasi Arsip Digital dibuat dengan CodeIgniter</p>
+              <a href="#">Github</a>
+            </div>
+          </div>
+
+          <!-- <div class="card">
+            <div class="box">
+              <img src="images/profile-5.jpeg" />
+              <div class="text">Nama Project</div>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#">Github</a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- Akhir dari Project -->
+
+    <!-- Section Contact -->
+    <section class="contact" id="contact">
+      <div class="max-width">
+        <h2 class="title">Kontak</h2>
+        <div class="contact-content">
+          <!-- Berkenalan Lebih Dalam -->
+          <div class="column left">
+            <div class="text">Berkenalan lebih dalam</div>
+            <p>Tak kenal maka tak sayang, pepatah yang biasa digunakan orang untuk berkenalan. Mari kenalan lebih dalam dengan saya.</p>
+            <div class="icons">
+              <div class="row">
+                <i class="fas fa-user"></i>
+                <div class="info">
+                  <div class="head">Nama</div>
+                  <div class="sub-title">Irfansyah</div>
+                </div>
+              </div>
+              <div class="row">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="info">
+                  <div class="head">Alamat</div>
+                  <div class="sub-title">Klipang Permai H/316, Tembalang, Semarang, Indonesia</div>
+                </div>
+              </div>
+              <div class="row">
+                <i class="fas fa-envelope"></i>
+                <div class="info">
+                  <div class="head">Email</div>
+                  <div class="sub-title">irfansyahavatar1@gmail.com</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kirim Pesan -->
+          <div class="column right">
+            <div class="text">Kirim Pesan</div>
+
+            <!-- Alert -->
+            <div class="alert my-alert d-none">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              Pesan berhasil terkirim!
+            </div>
+
+            <form name="portfolio-kontak">
+              <div class="fields">
+                <div class="field name">
+                  <input type="text" name="nama" class="form-control" placeholder="Nama" required />
+                </div>
+
+                <div class="field email">
+                  <input type="email" name="email" class="form-control" placeholder="Email" required />
+                </div>
+              </div>
+
+              <div class="field">
+                <input type="text" name="judul" class="form-control" placeholder="Judul" required />
+              </div>
+
+              <div class="field textarea">
+                <textarea cols="30" rows="10" name="pesan" class="form-control" placeholder="Pesan..." required></textarea>
+              </div>
+
+              <button class="btn-kirim" type="submit">Kirim!</button>
+              <button class="buttonload btn-loading d-none" disabled><i class="fa fa-spinner fa-spin"></i>Loading</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir dari Contact -->
+
+    <!-- Section Footer -->
+    <footer style="font-family: 'Poppins', sans-serif">
+      <p>Crafted with <span style="color: red">&#9829;</span> by <a href="https://www.instagram.com/irfansy_ah/">Irfansyah</a></p>
+    </footer>
+    <!-- Akhir dari Footer -->
+
+    <!-- My Javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,826 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+:root {
+  --color-primary: #ffc234;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  padding: 30px 0;
+  transition: all 0.5s ease;
+  z-index: 999;
+}
+
+.navbar.sticky {
+  background: var(--color-primary);
+  padding: 25px 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #222;
+  font-size: 35px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.navbar.sticky .logo a {
+  color: #222;
+}
+
+.navbar .logo a span {
+  color: var(--color-primary);
+  transition: all 0.5s ease;
+}
+
+.navbar.sticky .logo a span {
+  color: #222;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  color: #222;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transform: color 0.5s ease;
+}
+
+.navbar .menu li a:hover {
+  color: var(--color-primary);
+}
+
+.navbar.sticky .menu li a:hover {
+  color: white;
+}
+
+/* Button Responsive */
+.menu-btn {
+  color: #222;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Home */
+.home {
+  display: flex;
+  /* background: url("images/banner2.jpg") no-repeat center; */
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #222;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-halo {
+  font-size: 27px;
+}
+
+.home .home-content .text-nama {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-content .text-pekerjaan {
+  font-size: 35px;
+  margin: 5px 0;
+}
+
+.home .home-content .text-pekerjaan span {
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.home .home-content .cv {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #222;
+  font-size: 23px;
+  padding: 12px 33px;
+  margin-top: 20px;
+  border-radius: 6px;
+  font-family: "Ubuntu", sans-serif;
+  border: 2px solid var(--color-primary);
+  transition: all 0.5s ease;
+  z-index: 998;
+}
+
+.home .home-content .cv:hover {
+  color: var(--color-primary);
+  background: none;
+}
+
+.home .home-content .icons {
+  position: absolute;
+  margin-top: 130px;
+  z-index: 998;
+}
+
+.home .home-content .fa-instagram {
+  color: rgb(56, 56, 56);
+  margin-right: 30px;
+  transition: color 0.3s ease;
+}
+
+.home .home-content .fa-instagram:hover {
+  color: var(--color-primary);
+}
+
+.home .home-content .fa-twitter {
+  color: rgb(56, 56, 56);
+  margin-right: 30px;
+  transition: color 0.3s ease;
+}
+
+.home .home-content .fa-twitter:hover {
+  color: var(--color-primary);
+}
+
+.home .home-content .fa-facebook-square {
+  color: rgb(56, 56, 56);
+  transition: color 0.3s ease;
+}
+
+.home .home-content .fa-facebook-square:hover {
+  color: var(--color-primary);
+}
+
+.images {
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+}
+
+.images img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: all 1s ease;
+}
+
+.images:hover .shape {
+  bottom: 40px;
+}
+
+.images:hover .girl {
+  left: 45%;
+}
+
+/* About */
+section {
+  padding: 100px 0;
+}
+
+.about,
+.service,
+.project,
+.social,
+.contact,
+.footer {
+  font-family: "Poppins", sans-serif;
+}
+
+section .title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.about .about-content,
+.service .serv-content,
+.social .social-content,
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* About */
+.about .about-content .left {
+  width: 45%;
+}
+
+.about .about-content .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.about .about-content .right {
+  width: 55%;
+}
+
+.about .about-content .right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .about-content .right .text span {
+  color: var(--color-primary);
+}
+
+/* Service */
+.service,
+.project {
+  color: #222;
+  background-color: white;
+}
+
+.service .serv-content .card {
+  width: calc(33% - 20px);
+  background-color: whitesmoke;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service .serv-content .card:hover {
+  background-color: #212529;
+}
+
+.service .serv-content .card .box {
+  transition: all 0.3s ease;
+}
+
+.service .serv-content .card:hover .box {
+  transform: scale(1.05);
+}
+
+.service .serv-content .card i {
+  font-size: 50px;
+  color: #222;
+  transition: color 0.5s ease;
+}
+
+.service .serv-content .card:hover i {
+  color: var(--color-primary);
+}
+
+.service .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+  transition: color 0.5s ease;
+}
+
+.service .serv-content .card:hover .text {
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+.service .serv-content .card p {
+  transition: color 0.5s ease;
+}
+
+.service .serv-content .card:hover p {
+  color: whitesmoke;
+}
+
+/* Project */
+.project .carousel .card {
+  background-color: whitesmoke;
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+.project .carousel .card:hover {
+  background-color: var(--color-primary);
+}
+.project .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+.project .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+.project .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.project .carousel .card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--color-primary);
+  transition: all 0.3s ease;
+}
+.project .carousel .card:hover img {
+  border-color: white;
+}
+.project .carousel .card a {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #222;
+  font-size: 15px;
+  padding: 7px 15px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-family: "Ubuntu", sans-serif;
+  border: 2px solid var(--color-primary);
+  transition: all 0.5s ease;
+}
+.project .carousel .card:hover a {
+  background-color: #222;
+  color: var(--color-primary);
+  border-color: #222;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary) !important;
+  margin: 0 5px;
+  transition: all 0.4 ease;
+}
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background-color: var(--color-primary) !important;
+}
+
+/* Contact */
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+.contact .contact-content .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact .contact-content .left p {
+  text-align: justify;
+}
+.contact .contact-content .left .icons {
+  margin: 10px 0;
+}
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .contact-content .row .info {
+  margin-left: 30px;
+}
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: var(--color-primary);
+}
+.contact .contact-content .info .head {
+  font-weight: 500;
+}
+.contact .contact-content .info .sub-title {
+  color: #333;
+}
+.contact .right form .fields {
+  display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contact .right form .textarea {
+  height: 80px;
+  width: 100%;
+}
+.contact .right form .name {
+  margin-right: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+  border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+.right form .btn-kirim {
+  color: black;
+  width: 160px !important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  transition: all 0.3s ease;
+}
+.right form .btn-kirim:hover {
+  color: var(--color-primary);
+  background: none;
+}
+.right form .buttonload {
+  width: 160px !important;
+  height: 45px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--color-primary);
+  background: none;
+  border: 2px solid var(--color-primary);
+  padding: 12px 16px; /* Some padding */
+}
+.d-none {
+  display: none;
+}
+
+/* Alert */
+.alert {
+  padding: 20px;
+  background-color: #04aa6d;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  padding: 15px 23px;
+  color: #fff;
+  text-align: center;
+}
+footer p {
+  margin-top: 15px;
+}
+footer p a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+footer p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1300px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+
+  .home .home-content .text-pekerjaan span {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 947px) {
+  .menu-btn {
+    color: #222;
+    display: block;
+    z-index: 2;
+  }
+
+  .menu-btn i.active::before {
+    color: white;
+    content: "\f00d";
+  }
+
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: -150%;
+    background: #222;
+    text-align: center;
+    padding-top: 90px;
+    transition: all 0.5s ease;
+  }
+
+  .navbar .menu.active {
+    top: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+    color: white;
+  }
+
+  .home .home-content .text-halo {
+    font-size: 23px;
+  }
+
+  .home .home-content .text-nama {
+    font-size: 70px;
+  }
+
+  .home .home-content .text-pekerjaan {
+    font-size: 30px;
+  }
+
+  .home .home-content .cv {
+    font-size: 20px;
+    padding: 9px 28px;
+  }
+
+  .images {
+    width: 35%;
+    height: 75%;
+  }
+  .max-width {
+    max-width: 1300px;
+  }
+  .about .about-content .column {
+    width: 100%;
+  }
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .right {
+    flex: 100%;
+    margin-left: 26px;
+  }
+
+  .service .serv-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  .contact .contact-content .column {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 690px) {
+  .max-width {
+    max-width: 1300px;
+    padding: 0 23px;
+  }
+
+  .navbar .menu {
+    top: -150%;
+  }
+
+  .navbar {
+    padding-left: 20px;
+    padding-right: 35px;
+  }
+
+  .navbar.sticky {
+    padding-left: 20px;
+    padding-right: 35px;
+  }
+
+  .home .max-width {
+    margin: 30px auto auto;
+  }
+
+  .home .home-content .text-halo {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .home .home-content .text-nama {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+  }
+
+  .home .home-content .text-pekerjaan {
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+  }
+  .home .home-content .text-pekerjaan span {
+    display: inline;
+    padding-left: 5px;
+  }
+
+  .home .home-content .cv {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    margin-left: 130px;
+    margin-right: 130px;
+    padding: 8px 20px;
+  }
+
+  .home .home-content .icons {
+    margin: 30px 120px 0;
+  }
+
+  .images {
+    width: 45%;
+    height: 50%;
+    margin: auto 130px auto;
+  }
+
+  .service .serv-content .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .images {
+    margin: auto 100px auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .home .home-content .cv {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .home .home-content .icons {
+    margin: 30px 105px 0;
+  }
+
+  .home .home-content .fa-instagram {
+    margin-right: 15px;
+  }
+
+  .home .home-content .fa-twitter {
+    margin-right: 15px;
+  }
+
+  .images {
+    margin: auto 60px auto;
+  }
+
+  .contact .right form .fields {
+    flex-direction: column;
+  }
+  .contact .right form .name,
+  .contact .right form .email {
+    margin: 0;
+  }
+  .right form .error-box {
+    width: 150px;
+  }
+  .scroll-up-btn {
+    right: 15px;
+    bottom: 15px;
+    height: 38px;
+    width: 35px;
+    font-size: 23px;
+    line-height: 38px;
+  }
+}
+
+@media (max-width: 390px) {
+  .home .max-width {
+    margin: 70px auto auto;
+    margin-left: 50px;
+  }
+
+  .home .home-content .text-halo {
+    font-size: 17px;
+  }
+
+  .home .home-content .text-nama {
+    font-size: 47px;
+  }
+
+  .home .home-content .text-pekerjaan {
+    font-size: 20px;
+  }
+
+  .home .home-content .cv {
+    font-size: 13px;
+    margin-left: 80px;
+    margin-right: 75px;
+    padding: 6px 10px;
+  }
+
+  .home .home-content .icons {
+    margin: 30px 70px 0;
+  }
+
+  .images {
+    height: 45%;
+    width: 30%;
+    margin: auto 80px auto;
+  }
+}
