@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 :root {
   --color-primary: #ffc234;
+  --color-muted: #888;
 }
 
 * {
@@ -21,7 +22,7 @@ html {
   background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--color-muted);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -167,7 +168,7 @@ html {
 }
 
 .home .home-content .fa-github {
-  color: #888;
+  color: var(--color-muted);
   margin-right: 30px;
   transition: color 0.3s ease;
   transform: scale(1.2);
@@ -178,7 +179,7 @@ html {
 }
 
 .home .home-content .fa-linkedin {
-  color: #888;
+  color: var(--color-muted);
   transition: color 0.3s ease;
   transform: scale(1.2);
 }
@@ -296,7 +297,7 @@ section .title {
   align-items: center;
   padding: 10px;
   box-sizing: border-box;
-  border: 1px solid #888;
+  border: 1px solid var(--color-muted);
   border-radius: 50%;
   transition: all 0.3s ease;
 }
@@ -313,25 +314,25 @@ section .title {
 }
 
 .about .about-content .right .fa-instagram {
-  color: #888;
+  color: var(--color-muted);
   transform: scale(1.3);
   transition: color 0.3s ease;
 }
 
 .about .about-content .right .fa-twitter {
-  color: #888;
+  color: var(--color-muted);
   transform: scale(1.3);
   transition: color 0.3s ease;
 }
 
 .about .about-content .right .fa-facebook-square {
-  color: #888;
+  color: var(--color-muted);
   transform: scale(1.3);
   transition: color 0.3s ease;
 }
 
 .about .about-content .right .fa-youtube {
-  color: #888;
+  color: var(--color-muted);
   transform: scale(1.3);
   transition: color 0.3s ease;
 }
@@ -607,7 +608,100 @@ footer {
   color: #fff;
   text-align: center;
 }
+
+footer .footer-main {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  box-sizing: border-box;
+}
+
+footer .footer-main .kampus,
+footer .footer-main .komunitas,
+footer .footer-main .tautan {
+  text-align: start;
+  text-decoration: none;
+}
+
+footer .footer-main .footer-main h3 {
+  font-size: 25px;
+}
+
+footer .footer-main .kampus p {
+  font-size: 15px;
+  margin-top: -3px;
+  margin-bottom: 15px;
+}
+
+footer .footer-main .tautan a,
+footer .footer-main .komunitas a,
+footer .footer-main .kampus a {
+  color: var(--color-muted);
+  transition: all 0.4s ease;
+  display: block;
+}
+
+footer .footer-main .tautan a:hover,
+footer .footer-main .komunitas a:hover,
+footer .footer-main .kampus a:hover {
+  color: var(--color-primary);
+  transform: translateX(5px);
+}
+
+footer .garis {
+  width: 100%;
+  height: 2px;
+  border: 1px solid #333;
+}
+
+footer .icons {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+footer .border {
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-muted);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+footer .border:hover {
+  border: 1px solid var(--color-primary);
+  transform: translateY(-7px);
+}
+
+footer .border:hover .fa-github,
+footer .border:hover .fa-linkedin,
+footer .border:hover .fa-instagram,
+footer .border:hover .fa-twitter,
+footer .border:hover .fa-facebook-square,
+footer .border:hover .fa-youtube {
+  color: var(--color-primary);
+}
+
+footer .fa-github,
+footer .fa-linkedin,
+footer .fa-instagram,
+footer .fa-twitter,
+footer .fa-facebook-square,
+footer .fa-youtube {
+  color: var(--color-muted);
+  transform: scale(1.3);
+  transition: color 0.3s ease;
+}
+
 footer p {
+  color: var(--color-muted);
   margin-top: 15px;
 }
 footer p a {
@@ -640,7 +734,6 @@ footer p a:hover {
     padding: 0 50px;
   }
 }
-
 @media (max-width: 947px) {
   .menu-btn {
     color: #222;
@@ -706,15 +799,16 @@ footer p a:hover {
   }
   .about .about-content .column {
     width: 100%;
+    margin: auto;
   }
+
   .about .about-content .left {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 60px;
+    padding-right: 0;
   }
+
   .about .about-content .right {
-    flex: 100%;
-    margin-left: 26px;
+    margin-top: 25px;
+    padding-left: 0;
   }
 
   .service .serv-content .card {
@@ -784,7 +878,7 @@ footer p a:hover {
   }
 
   .home .home-content .icons {
-    margin: 30px 120px 0;
+    margin: 30px 155px 0;
   }
 
   .images {
@@ -792,9 +886,25 @@ footer p a:hover {
     height: 50%;
     margin: auto 130px auto;
   }
+  .about .about-content {
+    margin: 0 20px;
+  }
 
   .service .serv-content .card {
     width: 100%;
+  }
+
+  footer .footer-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 25px;
+  }
+
+  footer .footer-main .komunitas,
+  footer .footer-main .tautan {
+    margin-top: 25px;
   }
 }
 
@@ -811,14 +921,14 @@ footer p a:hover {
   }
 
   .home .home-content .icons {
-    margin: 30px 105px 0;
+    margin: 30px 133px 0;
   }
 
-  .home .home-content .fa-instagram {
+  .home .home-content .fa-github {
     margin-right: 15px;
   }
 
-  .home .home-content .fa-twitter {
+  .home .home-content .fa-linkedin {
     margin-right: 15px;
   }
 
@@ -872,7 +982,9 @@ footer p a:hover {
   }
 
   .home .home-content .icons {
-    margin: 30px 70px 0;
+    margin: 30px 93px 0;
+    display: flex;
+    justify-content: center;
   }
 
   .images {
