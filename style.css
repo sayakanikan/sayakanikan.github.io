@@ -222,7 +222,7 @@ html {
   left: 45%;
 }
 
-/* About */
+/* All */
 section {
   padding: 100px 0;
 }
@@ -231,6 +231,7 @@ section {
 .service,
 .project,
 .social,
+.quote,
 .contact,
 .footer {
   font-family: "Poppins", sans-serif;
@@ -472,6 +473,24 @@ section .title {
 .owl-dot:hover {
   background-color: var(--color-primary) !important;
 }
+
+/* Quotes */
+/* .quote {
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote h2 {
+  text-align: center;
+  color: #f1f1f1;
+}
+
+.quote .quote-content {
+  color: var(--color-primary);
+  font-size: 20px;
+} */
 
 /* Contact */
 .contact .contact-content .column {
