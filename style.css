@@ -292,19 +292,19 @@ section .title {
 }
 
 .about .about-content .right .border {
-  height: 37px;
+  /* height: 37px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid var(--color-muted);
-  border-radius: 50%;
+  border-radius: 50%; */
   transition: all 0.3s ease;
 }
 
 .about .about-content .right .border:hover {
-  border: 1px solid var(--color-primary);
+  /* border: 1px solid var(--color-primary); */
   transform: translateY(-7px);
 }
 .about .about-content .right .border:hover .fa-instagram,
@@ -380,7 +380,7 @@ section .title {
 .service .serv-content .card .text {
   font-size: 25px;
   font-weight: 500;
-  margin: 10px 0 7px 0;
+  margin: 10px 0 10px 0;
   transition: color 0.5s ease;
 }
 
@@ -447,6 +447,16 @@ section .title {
   transition: all 0.5s ease;
 }
 .project .carousel .card:hover a {
+  background-color: whitesmoke;
+  color: #000;
+  border-color: var(--color-primary);
+}
+.project .carousel .card a {
+  background-color: var(--color-primary);
+  color: #000;
+  border-color: var(--color-primary);
+}
+.project .carousel .card a:hover {
   background-color: #222;
   color: var(--color-primary);
   border-color: #222;
