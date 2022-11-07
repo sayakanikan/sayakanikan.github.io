@@ -247,7 +247,7 @@ section .title {
 }
 
 .about .about-content,
-.service .serv-content,
+.service,
 .social .social-content,
 .contact .contact-content {
   display: flex;
@@ -345,6 +345,48 @@ section .title {
   background-color: white;
 }
 
+.service .content {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.service .edukasi,
+.service .pengalaman {
+  width: 130px;
+  height: 40px;
+  background-color: whitesmoke;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.service .edukasi {
+  border-radius: 15px 0 0 15px;
+}
+
+.service .pengalaman {
+  border-radius: 0 15px 15px 0;
+}
+
+.service .edukasi:hover,
+.service .pengalaman:hover {
+  background-color: black;
+  color: var(--color-primary);
+  transition: all 0.5s ease;
+}
+
+.service .serv-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .service .serv-content .card {
   width: calc(33% - 20px);
   background-color: whitesmoke;
@@ -405,9 +447,11 @@ section .title {
   text-align: center;
   transition: color 0.3s ease;
 }
+
 .project .carousel .card:hover {
   background-color: var(--color-primary);
 }
+
 .project .carousel .card .box {
   display: flex;
   flex-direction: column;
@@ -415,15 +459,18 @@ section .title {
   justify-content: center;
   transition: all 0.5s ease;
 }
+
 .project .carousel .card:hover .box {
   transform: scale(1.05);
 }
+
 .project .carousel .card .text {
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
-.project .carousel .card img {
+
+.project .carousel .card .img {
   height: 150px;
   width: 150px;
   object-fit: cover;
@@ -431,9 +478,37 @@ section .title {
   border: 5px solid var(--color-primary);
   transition: all 0.3s ease;
 }
-.project .carousel .card:hover img {
+
+.project .carousel .card:hover .img {
   border-color: white;
 }
+
+.project .carousel .card .flex {
+  display: flex;
+}
+
+.project .carousel .card .flex .tech {
+  width: 25px;
+  height: 25px;
+  margin: 10px 10px 10px 0;
+  transition: all 0.2s ease;
+}
+
+.project .carousel .card .flex .tw {
+  width: 29px;
+  height: 23px;
+  margin: 10px 10px 10px 0;
+  transition: all 0.2s ease;
+}
+
+.project .carousel .card .flex .tech:hover {
+  transform: translateY(-5px);
+}
+
+.project .carousel .card .flex .tw:hover {
+  transform: translateY(-5px);
+}
+
 .project .carousel .card a {
   display: inline-block;
   background-color: var(--color-primary);
@@ -485,7 +560,7 @@ section .title {
 }
 
 /* Quotes */
-/* .quote {
+.quote {
   background-color: #111;
   display: flex;
   flex-direction: column;
@@ -500,7 +575,7 @@ section .title {
 .quote .quote-content {
   color: var(--color-primary);
   font-size: 20px;
-} */
+}
 
 /* Contact */
 .contact .contact-content .column {
