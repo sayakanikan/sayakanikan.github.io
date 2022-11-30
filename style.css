@@ -470,7 +470,7 @@ section .title {
   margin: 10px 0 7px 0;
 }
 
-.project .carousel .card .img {
+.project .carousel .card .projpic {
   height: 150px;
   width: 150px;
   object-fit: cover;
@@ -479,7 +479,7 @@ section .title {
   transition: all 0.3s ease;
 }
 
-.project .carousel .card:hover .img {
+.project .carousel .card:hover .projpic {
   border-color: white;
 }
 
