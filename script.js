@@ -60,3 +60,43 @@ form.addEventListener("submit", (e) => {
     })
     .catch((error) => console.error("Error!", error.message));
 });
+
+// Edukasi dan Pengalaman Section
+const btnEdukasi = document.getElementById("btn-edukasi");
+const btnPengalaman = document.getElementById("btn-pengalaman");
+const btnSertifikasi = document.getElementById("btn-sertifikasi");
+const sectionEdukasi = document.getElementById("edukasi");
+const sectionPengalaman = document.getElementById("pengalaman");
+const sectionSertifikasi = document.getElementById("sertifikasi");
+
+function edukasi() {
+  // Add and remove content
+  sectionEdukasi.classList.remove("d-none");
+  sectionPengalaman.classList.add("d-none");
+  sectionSertifikasi.classList.add("d-none");
+
+  // Add and remove active class
+  btnEdukasi.classList.add("actived");
+  btnSertifikasi.classList.remove("actived");
+  btnPengalaman.classList.remove("actived");
+}
+
+function pengalaman() {
+  sectionPengalaman.classList.remove("d-none");
+  sectionEdukasi.classList.add("d-none");
+  sectionSertifikasi.classList.add("d-none");
+
+  btnPengalaman.classList.add("actived");
+  btnSertifikasi.classList.remove("actived");
+  btnEdukasi.classList.remove("actived");
+}
+
+function sertifikasi() {
+  sectionSertifikasi.classList.remove("d-none");
+  sectionEdukasi.classList.add("d-none");
+  sectionPengalaman.classList.add("d-none");
+
+  btnSertifikasi.classList.add("actived");
+  btnPengalaman.classList.remove("actived");
+  btnEdukasi.classList.remove("actived");
+}

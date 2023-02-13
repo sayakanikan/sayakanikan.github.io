@@ -35,6 +35,15 @@ html {
   margin: auto;
 }
 
+.d-none {
+  display: none;
+}
+
+.actived {
+  background-color: #111 !important;
+  color: var(--color-primary);
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
@@ -345,8 +354,12 @@ section .title {
   background-color: white;
 }
 
-.service .content {
-  width: 300px;
+.service{
+  flex-direction: column;
+}
+
+.service .mycontent {
+  max-width: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -354,7 +367,8 @@ section .title {
 }
 
 .service .edukasi,
-.service .pengalaman {
+.service .pengalaman,
+.service .sertifikasi {
   width: 130px;
   height: 40px;
   background-color: whitesmoke;
@@ -369,76 +383,150 @@ section .title {
   border-radius: 15px 0 0 15px;
 }
 
+.service .sertifikasi {
+  border-radius: 0;
+}
+
 .service .pengalaman {
   border-radius: 0 15px 15px 0;
 }
 
 .service .edukasi:hover,
+.service .sertifikasi:hover,
 .service .pengalaman:hover {
   background-color: black;
   color: var(--color-primary);
   transition: all 0.5s ease;
 }
 
-.service .serv-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  min-width: 900px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.service .serv-content .card {
-  width: calc(33% - 20px);
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: var(--color-primary);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  max-width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid var(--color-primary);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.container:hover:after {
+  background-color: var(--color-primary);
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid whitesmoke;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent whitesmoke;
+}
+
+.left:hover:before {
+  border: medium solid var(--color-primary);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--color-primary);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid whitesmoke;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent whitesmoke transparent transparent;
+  transition: color 0.3s ease;
+}
+
+.right:hover:before {
+  border: medium solid var(--color-primary);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--color-primary) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  min-width: 100%;
+  padding: 20px 30px;
   background-color: whitesmoke;
-  text-align: center;
+  position: relative;
   border-radius: 6px;
-  padding: 20px 25px;
-  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.container:hover .content {
+  background-color: var(--color-primary);
+  color: #111;
+}
+
+.timeline .content h2,
+.timeline .content p,
+.timeline .content b {
   transition: all 0.3s ease;
 }
 
-.service .serv-content .card:hover {
-  background-color: #212529;
+.timeline .content:hover h2,
+.timeline .content:hover p,
+.timeline .content:hover b {
+  scale: 1.05;
 }
-
-.service .serv-content .card .box {
-  transition: all 0.3s ease;
-}
-
-.service .serv-content .card:hover .box {
-  transform: scale(1.05);
-}
-
-.service .serv-content .card i {
-  font-size: 50px;
-  color: #222;
-  transition: color 0.5s ease;
-}
-
-.service .serv-content .card:hover i {
-  color: var(--color-primary);
-}
-
-.service .serv-content .card .text {
-  font-size: 25px;
-  font-weight: 500;
-  margin: 10px 0 10px 0;
-  transition: color 0.5s ease;
-}
-
-.service .serv-content .card:hover .text {
-  font-weight: 500;
-  color: whitesmoke;
-}
-
-.service .serv-content .card p {
-  transition: color 0.5s ease;
-}
-
-.service .serv-content .card:hover p {
-  color: whitesmoke;
-}
-
 /* Project */
 .project .carousel .card {
   background-color: whitesmoke;
@@ -996,6 +1084,40 @@ footer p a:hover {
 
   .service .serv-content .card {
     width: 100%;
+  }
+
+  .timeline {
+    min-width: 0px;
+  }
+
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid whitesmoke;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent whitesmoke transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
   }
 
   footer .footer-main {

@@ -26,7 +26,7 @@
         <ul class="menu">
           <li><a href="#home">Beranda</a></li>
           <li><a href="#about">Tentang</a></li>
-          <li><a href="#service">Skills</a></li>
+          <li><a href="#service">Karir</a></li>
           <li><a href="#project">Projects</a></li>
           <li><a href="#contact">Kontak</a></li>
         </ul>
@@ -72,8 +72,7 @@
           <div class="column left">
             <div class="text">Hai, saya <span>Irfan</span></div>
             <p>
-              Mahasiswa semester 7 prodi Teknik Informatika di Universitas Dian Nuswantoro Semarang. Berusia 21 tahun, dan bertempat tinggal di kota Semarang. Memiliki ketertarikan pada hal yang berkaitan dengan pengembangan web, dan
-              memiliki penguasaaan bahasa HTML, CSS, Javascript, dan PHP.
+              Mahasiswa tingkat akhir jurusan Teknik Informatika di Universitas Dian Nuswantoro Semarang. Berusia 21 tahun, dan bertempat tinggal di kota Semarang. Memiliki ketertarikan pada hal yang berkaitan dengan pengembangan web, dan memiliki pengalaman menarik menjadi Backend Developer.
             </p>
           </div>
           <div class="column right">
@@ -106,75 +105,122 @@
     <!-- Akhir dari About -->
 
     <!-- Section Services -->
-    <!-- <section class="service" id="service">
+    <section class="service" id="service">
       <div class="max-width">
-        <h2 class="title">Skills</h2>
-        <div class="serv-content">
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-code"></i>
-              <div class="text">Front-End Web</div>
-              <p>Menguasai bahasa Html, Css, dan Javascript, serta framework bootstrap. Memiliki pengalaman pembuatan web design.</p>
-            </div>
-          </div>
+        <h2 class="title">Perjalanan Karir</h2>
 
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-database"></i>
-              <div class="text">Back-End Web</div>
-              <p>Mernguasai bahasa Php serta framework CodeIgniter. Memiliki pengalaman dalam pembuatan project web app.</p>
-            </div>
+        <div class="mycontent">
+          <div class="edukasi actived" id="btn-edukasi" onclick="edukasi()">
+            <h4>Edukasi</h4>
           </div>
-
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-camera"></i>
-              <div class="text">Fotografi</div>
-              <p>Mempunyai hobi di bidang fotografi, dan memiliki pengalaman dalam mengerjakan project foto, maupun video.</p>
-            </div>
+          <div class="sertifikasi" id="btn-sertifikasi" onclick="sertifikasi()">
+            <h4>Sertifikat</h4>
+          </div>
+          <div class="pengalaman" id="btn-pengalaman" onclick="pengalaman()">
+            <h4>Pengalaman</h4>
           </div>
         </div>
       </div>
-    </section> -->
-    <!-- Akhir dari Services -->
-
-    <!-- Section Services -->
-    <section class="service" id="service">
-      <div class="max-width">
-        <h2 class="title">Skills</h2>
-
-        <!-- <div class="content">
-          <div class="edukasi">
-            <h4>Edukasi</h4>
+      <!-- Edukasi -->
+      <div class="timeline" id="edukasi">
+        <div class="container left">
+          <div class="content">
+            <h2>Jul 2007 - Mei 2013</h2>
+            <p style="font-weight: 500;">SD N Sendangmulyo 04 Semarang</p>
           </div>
-          <div class="pengalaman">
-            <h4>Pengalaman</h4>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2>Jul 2013 - Mei 2016</h2>
+            <p style="font-weight: 500;">SMP N 8 Semarang</p>
           </div>
-        </div> -->
-
-        <div class="serv-content">
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-code"></i>
-              <div class="text">Front-End Web</div>
-              <p>Menguasai bahasa Html, Css, dan Javascript, serta framework bootstrap. Memiliki pengalaman pembuatan web design.</p>
-            </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h2>Jul 2016 - Apr 2019</h2>
+            <p style="font-weight: 500;">SMA N 2 Semarang</p>
           </div>
-
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-database"></i>
-              <div class="text">Back-End Web</div>
-              <p>Mernguasai bahasa Php serta framework CodeIgniter. Memiliki pengalaman dalam pembuatan project web app.</p>
-            </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2>Sep 2019 - Sekarang</h2>
+            <p style="font-weight: 500;">Universitas Dian Nuswantoro</p>
           </div>
-
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-camera"></i>
-              <div class="text">Fotografi</div>
-              <p>Mempunyai hobi di bidang fotografi, dan memiliki pengalaman dalam mengerjakan project foto, maupun video.</p>
-            </div>
+        </div>
+      </div>
+      <!-- Sertifikasi -->
+      <div class="timeline d-none" id="sertifikasi">
+        <div class="container left">
+          <div class="content">
+            <h2>Mar 2022 - Mar 2024</h2>
+            <p style="font-weight: 500;">English Proficiency Certificate (Score: 105)</p>
+            <p>Duolingo English Test</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2>Jul 2022</h2>
+            <p style="font-weight: 500;">Responsive Web Design</p>
+            <p>freeCodeCamp</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h2>Jul 2022</h2>
+            <p style="font-weight: 500;">Cisco Cybersecurity Essentials</p>
+            <p>Cisco Networking Academy</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2>Sep 2022</h2>
+            <p style="font-weight: 500;">Cisco IT Essentials</p>
+            <p>Cisco Networking Academy</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h2>Jan 2023 - Jan 2026</h2>
+            <p style="font-weight: 500;">Belajar Dasar Pemrograman Javascript</p>
+            <p>Dicoding Indonesia</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2>Jan 2023 - Jan 2026</h2>
+            <p style="font-weight: 500;">Cloud Practitioner Essentials (Belajar AWS Cloud)</p>
+            <p>Dicoding Indonesia</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h2>Jan 2023 - Jan 2026</h2>
+            <p style="font-weight: 500;">Belajar Membuat Aplikasi Backend untuk Pemula</p>
+            <p>Dicoding Indonesia</p>
+          </div>
+        </div>
+      </div>
+      <!-- Pengalaman -->
+      <div class="timeline d-none" id="pengalaman">
+        <div class="container left">
+          <div class="content">
+            <h2>Feb 2022 - Mar 2022</h2>
+            <p style="font-weight: 500;">Web Developer Internship</p>
+            <p>Dinas Pemberdayaan Masyarakat, Desa, Kependudukan, dan Pencatatan Sipil Provinsi Jawa Tengah, Semarang</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2>Sep 2022 - Des 2022</h2>
+            <p style="font-weight: 500;">Research Assistant</p>
+            <p>Universitas Dian Nuswantoro, Semarang</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h2>Feb 2023 - Sekarang</h2>
+            <p style="font-weight: 500;">Backend Developer Internship</p>
+            <p>Telkom Indonesia, Bandung</p>
           </div>
         </div>
       </div>
@@ -437,5 +483,11 @@
 
     <!-- My Javascript -->
     <script src="script.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
