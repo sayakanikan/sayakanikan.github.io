@@ -1081,13 +1081,20 @@ footer p a:hover {
   .about .about-content {
     margin: 0 20px;
   }
-
+  
   .service .serv-content .card {
     width: 100%;
   }
 
+  .service .mycontent {
+    max-width: 300px;
+    margin: 30px auto;
+    font-size: 13px;
+  }
+
   .timeline {
     min-width: 0px;
+    margin: 0 30px;
   }
 
   /* Place the timelime to the left */
@@ -1117,7 +1124,27 @@ footer p a:hover {
   
   /* Make all right containers behave like the left ones */
   .right {
-  left: 0%;
+    left: 0;
+  }
+
+  /* Add arrows to the left container (pointing right) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid whitesmoke;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent whitesmoke;
+  }
+
+  .content {
+    min-width: 30vh;
+    padding: 10px 20px;
+    font-size: 12.5px;
   }
 
   footer .footer-main {
