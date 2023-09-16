@@ -36,11 +36,12 @@ $(document).ready(function () {
 });
 
 // Form Submit dari Github
-const scriptURL = "https://script.google.com/macros/s/AKfycbxcUnhq8FquOFwCtNEi3FzMpE-ENjs7tNu-gumMs-lcnLYtVhKd8Wh7dlc1ohnxti6X/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbxh5JpRCtm-jhMKMul7Je75taB0oxkHZ5yhtUgYA5qH8AbTv5ZsBMLyztdE0yPRjCc8/exec";
 const form = document.forms["portfolio-kontak"];
 const btnKirim = document.querySelector(".btn-kirim");
 const btnLoading = document.querySelector(".btn-loading");
 const myAlert = document.querySelector(".my-alert");
+const myAlertFailed = document.querySelector(".my-alert-failed");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -56,9 +57,17 @@ form.addEventListener("submit", (e) => {
       myAlert.classList.toggle("d-none");
       // Reset Form
       form.reset();
-      console.log("Success!", response);
+      console.log("Berhasil kirim masukan!", response);
     })
-    .catch((error) => console.error("Error!", error.message));
+    .catch((error) => {
+      // Tampilkan tombol kirim dan alert, hilangkan tombol loading
+      btnLoading.classList.toggle("d-none");
+      btnKirim.classList.toggle("d-none");
+      myAlertFailed.classList.toggle("d-none");
+      // Reset Form
+      form.reset();
+      console.error("Error!", error.message)
+    });
 });
 
 // Edukasi dan Pengalaman Section
