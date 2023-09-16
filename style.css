@@ -364,6 +364,7 @@ section .title {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .service .edukasi,
@@ -663,6 +664,53 @@ section .title {
 .quote .quote-content {
   color: var(--color-primary);
   font-size: 20px;
+}
+
+/* Gallery */
+.gallery-image {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: all 0.7s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.03);
+}
+
+.grid-wrapper > .gallery-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-wrapper > .gallery-content > .gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.grid-wrapper {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 /* Contact */
@@ -1097,6 +1145,7 @@ footer p a:hover {
     max-width: 300px;
     margin: 30px auto;
     font-size: 13px;
+    cursor: pointer;
   }
 
   .timeline {
