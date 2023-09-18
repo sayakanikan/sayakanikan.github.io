@@ -237,7 +237,7 @@ section {
 }
 
 .about,
-.service,
+.carrer,
 .project,
 .social,
 .quote,
@@ -256,7 +256,7 @@ section .title {
 }
 
 .about .about-content,
-.service,
+.carrer,
 .social .social-content,
 .contact .contact-content {
   display: flex;
@@ -347,18 +347,18 @@ section .title {
   transition: color 0.3s ease;
 }
 
-/* Service */
-.service,
+/* Karir */
+.carrer,
 .project {
   color: #222;
   background-color: white;
 }
 
-.service{
+.carrer{
   flex-direction: column;
 }
 
-.service .mycontent {
+.carrer .mycontent {
   max-width: 100%;
   margin: auto;
   display: flex;
@@ -367,9 +367,9 @@ section .title {
   cursor: pointer;
 }
 
-.service .edukasi,
-.service .pengalaman,
-.service .sertifikasi {
+.carrer .edukasi,
+.carrer .pengalaman,
+.carrer .sertifikasi {
   width: 130px;
   height: 40px;
   background-color: whitesmoke;
@@ -380,21 +380,21 @@ section .title {
   transition: all 0.3s ease;
 }
 
-.service .edukasi {
+.carrer .edukasi {
   border-radius: 15px 0 0 15px;
 }
 
-.service .sertifikasi {
+.carrer .sertifikasi {
   border-radius: 0;
 }
 
-.service .pengalaman {
+.carrer .pengalaman {
   border-radius: 0 15px 15px 0;
 }
 
-.service .edukasi:hover,
-.service .sertifikasi:hover,
-.service .pengalaman:hover {
+.carrer .edukasi:hover,
+.carrer .sertifikasi:hover,
+.carrer .pengalaman:hover {
   background-color: black;
   color: var(--color-primary);
   transition: all 0.5s ease;
@@ -1058,7 +1058,7 @@ footer p a:hover {
     padding-left: 0;
   }
 
-  .service .serv-content .card {
+  .carrer .serv-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
@@ -1137,11 +1137,11 @@ footer p a:hover {
     margin: 0 20px;
   }
   
-  .service .serv-content .card {
+  .carrer .serv-content .card {
     width: 100%;
   }
 
-  .service .mycontent {
+  .carrer .mycontent {
     max-width: 300px;
     margin: 30px auto;
     font-size: 13px;
