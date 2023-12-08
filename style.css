@@ -2,7 +2,22 @@
 :root {
   --color-primary: #ffc234;
   --color-muted: #888;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --text-color: #000;
 }
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #ffc234;
+    --color-muted: #888;
+    --text-color: #fff;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
 
 * {
   margin: 0;
@@ -13,6 +28,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  color: var(--text-color);
+} */
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -354,7 +375,7 @@ section .title {
   background-color: white;
 }
 
-.carrer{
+.carrer {
   flex-direction: column;
 }
 
@@ -410,7 +431,7 @@ section .title {
 
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 6px;
   background-color: var(--color-primary);
@@ -429,7 +450,7 @@ section .title {
 
 /* The circles on the timeline */
 .container::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
@@ -826,7 +847,7 @@ section .title {
 
 .alert-danger {
   padding: 20px;
-  background-color: rgb(185 28 28);;
+  background-color: rgb(185 28 28);
   color: white;
   margin-bottom: 15px;
 }
@@ -1136,7 +1157,7 @@ footer p a:hover {
   .about .about-content {
     margin: 0 20px;
   }
-  
+
   .carrer .serv-content .card {
     width: 100%;
   }
@@ -1155,29 +1176,30 @@ footer p a:hover {
 
   /* Place the timelime to the left */
   .timeline::after {
-  left: 31px;
+    left: 31px;
   }
-  
+
   /* Full-width containers */
   .container {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
   }
-  
+
   /* Make sure that all arrows are pointing leftwards */
   .container::before {
-  left: 60px;
-  border: medium solid whitesmoke;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent whitesmoke transparent transparent;
+    left: 60px;
+    border: medium solid whitesmoke;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent whitesmoke transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-  left: 15px;
+  .left::after,
+  .right::after {
+    left: 15px;
   }
-  
+
   /* Make all right containers behave like the left ones */
   .right {
     left: 0;
